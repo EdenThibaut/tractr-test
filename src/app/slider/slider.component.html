@@ -1,0 +1,9 @@
+<div id="slider-container">
+  <nz-carousel [nzEffect]="effect">
+    <div nz-carousel-content *ngFor="let image of images">
+      <app-slide [url]="image"></app-slide>
+    </div>
+  </nz-carousel>
+  <i (click)="prev()" nz-icon nzType="left" nzTheme="outline"></i>
+  <i (click)="next()" nz-icon nzType="right" nzTheme="outline"></i>
+</div>

@@ -1,0 +1,43 @@
+<ng-container *ngFor="let info of infos">
+  <div [ngClass]="'info-'+info.type">
+    <h3>{{info.title}}</h3>
+    <ng-container *ngIf="info.type === 'texte'">
+      <p>{{info.content}}</p>
+    </ng-container>
+    <ng-container *ngIf="info.type === 'lieu'">
+      <p>{{info.adress}}</p>
+      <google-map id="map-container"
+        height="300px"
+        width="100%"
+        [zoom]="14"
+        [center]="{lat: 44.7313693, lng: 4.4841466}"
+        [options]="options"
+      >
+        <map-marker
+          [position]="{lat: 44.7313693, lng: 4.4841466}"
+        ></map-marker>
+      </google-map>
+    </ng-container>
+    <ng-container *ngIf="info.type === 'prix'">
+      <p>{{info.price}} €</p>
+    </ng-container>
+    <ng-container *ngIf="info.type === 'dates'">
+      <nz-select [ngModel]="-1" (ngModelChange)='handleDate($event)' nzPlaceHolder="Choisissez une date">
+        <nz-option *ngFor="let date of info.dates; let i=index" [nzValue]="i" [nzLabel]="date.date"></nz-option>
+      </nz-select>
+      <ng-container *ngIf="dateIsSelected">
+        <div class="grey-box my-3">
+          <h3>Horaire du rendez-vous</h3>
+          <p>{{dateSelected.debut}}</p>
+          <h3>Horaire de fin</h3>
+          <p>{{dateSelected.fin}}</p>
+          <h3>Nombre de places disponibles</h3>
+          <p>{{dateSelected.place}}</p>
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngIf="info.type === 'cadre'">
+      <div class="grey-box" [innerHTML]="info.content" ></div>
+    </ng-container>
+  </div>
+</ng-container>

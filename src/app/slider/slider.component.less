@@ -1,0 +1,44 @@
+#slider-container{
+  position: relative;
+
+  i.anticon-left{
+    position: absolute;
+    top: calc(50% - 2vw);
+    left: 25px;
+    font-size: 4vw;
+    color: rgba(255,255,255,0.2);
+    transition: all 1s;
+    z-index: 1;
+
+    &:hover{
+      transform: scale(1.1);
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+    }
+  }
+  i.anticon-right{
+    position: absolute;
+    top: calc(50% - 2vw);
+    right: 25px;
+    font-size: 4vw;
+    color: rgba(255,255,255,0.2);
+    transition: all 1s;
+    z-index: 1;
+
+    &:hover{
+      transform: scale(1.1);
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+    }
+  }
+
+  [nz-carousel-content] {
+    position: relative;
+    height: 500px;
+    line-height: 500px;
+    overflow: hidden;
+    background-color: #333;
+  }
+}
+
+

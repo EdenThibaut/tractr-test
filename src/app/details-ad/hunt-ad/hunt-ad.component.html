@@ -1,0 +1,15 @@
+<ng-container *ngFor="let info of infos">
+  <div [ngClass]="'info-'+info.type">
+    <h3>{{info.title}}</h3>
+    <ng-container *ngIf="info.type === 'texte'">
+      <p>{{info.content}}</p>
+    </ng-container>
+    <ng-container *ngIf="info.type === 'liste'">
+      <ul>
+        <li *ngFor="let item of info.items" >
+          {{item}}
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</ng-container>
