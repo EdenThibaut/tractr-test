@@ -981,18 +981,19 @@
       line-height: 17px;
     }
   }
-  .ng-pristine .ant-rate{
-    font-size: 14px;
-    padding-bottom: 10px;
-    .ant-rate-star{
-      margin-right: 4px;
-      &:last-child{
-        margin-right: 0px;
-      }
-      .anticon-star{
-        color: #cb6c14;
-        font-size: 16px;
-      }
+}
+
+.ng-pristine .ant-rate{
+  font-size: 16px;
+  padding-bottom: 10px;
+  color: #cb6c14;
+  .ant-rate-star{
+    margin-right: 4px;
+    &:last-child{
+      margin-right: 0px;
+    }
+    &.ant-rate-star-zero i{
+      color: #4a4a4a;
     }
   }
 }

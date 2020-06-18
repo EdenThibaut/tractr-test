@@ -3,7 +3,7 @@
     <nz-comment class="custom-comment" [nzAuthor]="comment.name" [nzDatetime]="comment.date">
       <nz-comment-content>
         <nz-rate [ngModel]="comment.rate" nzDisabled></nz-rate>
-        <p #quote nz-typography nzEllipsis nzExpandable="ok" [nzEllipsisRows]="2">{{comment.quote}}</p>
+        <p #quote nz-typography nzEllipsis nzExpandable [nzEllipsisRows]="2">{{comment.quote}}</p>
       </nz-comment-content>
     </nz-comment>
   </ng-container>

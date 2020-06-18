@@ -22,6 +22,7 @@ import { NzCommentModule } from 'ng-zorro-antd/comment';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 
 import { HeaderComponent } from './header/header.component';
 import { MenuMainComponent } from './header/menu-main/menu-main.component';
@@ -34,6 +35,10 @@ import { CommentsAdComponent } from './details-ad/comments-ad/comments-ad.compon
 import { ForecastAdComponent } from './details-ad/forecast-ad/forecast-ad.component';
 import { HomeAdComponent } from './details-ad/home-ad/home-ad.component';
 import { HuntAdComponent } from './details-ad/hunt-ad/hunt-ad.component';
+import { ActionsAdComponent } from './actions-ad/actions-ad.component';
+import { OwnerAdComponent } from './actions-ad/owner-ad/owner-ad.component';
+import { OptionsAdComponent } from './actions-ad/options-ad/options-ad.component';
+import { ReassuranceAdComponent } from './actions-ad/reassurance-ad/reassurance-ad.component';
 
 registerLocaleData(fr);
 
@@ -50,7 +55,11 @@ registerLocaleData(fr);
     CommentsAdComponent,
     ForecastAdComponent,
     HomeAdComponent,
-    HuntAdComponent
+    HuntAdComponent,
+    ActionsAdComponent,
+    OwnerAdComponent,
+    OptionsAdComponent,
+    ReassuranceAdComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +78,8 @@ registerLocaleData(fr);
     NzCommentModule,
     NzRateModule,
     NzTypographyModule,
-    NzAffixModule
+    NzAffixModule,
+    NzAvatarModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_FR }],
   bootstrap: [AppComponent]
