@@ -92,13 +92,11 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   next():void {
-    console.log("suivaaant");
     this.currentPagination = this.currentPagination+1;
     this.position = this.position - 100;
   }
 
   prev():void {
-    console.log("précédeeeent");
     this.currentPagination = this.currentPagination-1;
     this.position = this.position + 100;
   }

@@ -49,11 +49,9 @@ export class HeadAdComponent implements OnInit{
   }
 
   handleOverTag(i): void{
-    console.log(event);
     this.tags[i].isOver = true;
   }
   handleOutTag(i): void{
-    console.log(event);
     this.tags[i].isOver = false;
   }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { DrawerCnx, DrawerInscription } from "../../data.service";
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-menu-main',
@@ -9,7 +8,6 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuMainComponent implements OnInit {
-  //@Output() public openCnx: EventEmitter<void> = new EventEmitter();
   public stateCnx: boolean = false;
   public stateInscription: boolean = false;
   private _subscription_stateCnx: any;

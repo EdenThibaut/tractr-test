@@ -1,0 +1,21 @@
+<nz-drawer nzWrapClassName="drawerMenu" [nzTitle]="DrawerHead" [nzClosable]="true" [nzVisible]="subscription_stateMenu | async" nzPlacement="right" nzWidth="100%" (nzOnClose)="close()">
+  <div id="drawerMenu-container">
+    <ul class="list-unstyled">
+      <li><a href="/" alt="Retour à la page d'accueil">Accueil</a></li>
+      <li><a href="#" alt="Accès à la page d'aide">Aide</a></li>
+      <li (click)="openSignUp()">Blog</li>
+      <li (click)="openSignUp()">Contact et support</li>
+    </ul>
+    <ul class="list-unstyled">
+      <li (click)="openSignUp()">Connexion</li>
+      <li (click)="openSignOn()">Inscription</li>
+    </ul>
+  </div>
+</nz-drawer>
+<ng-template #DrawerHead>
+  <div id="logo">
+    <a href="/" alt="Accès à la page d'accueil">
+      <img src=".\assets\img\logo_1_white.svg" alt="Logo de Journée de chasse">
+    </a>
+  </div>
+</ng-template>

@@ -7,8 +7,8 @@ export class DrawerCnx {
 
   constructor() { }
 
-  changeState(stateCnx: boolean){
-    this.stateDrawer.next(stateCnx);
+  changeState(state: boolean){
+    this.stateDrawer.next(state);
   }
 }
 
@@ -18,7 +18,18 @@ export class DrawerInscription {
 
   constructor() { }
 
-  changeState(stateCnx: boolean){
-    this.stateDrawer.next(stateCnx);
+  changeState(state: boolean){
+    this.stateDrawer.next(state);
+  }
+}
+
+@Injectable()
+export class DrawerMenu {
+  stateDrawer: Subject<any> = new Subject<any>();
+
+  constructor() { }
+
+  changeState(state: boolean){
+    this.stateDrawer.next(state);
   }
 }
