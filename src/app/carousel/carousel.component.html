@@ -1,0 +1,9 @@
+<div class="carousel-container">
+  <button (click)="prev()" [disabled]="currentPagination ? false : true" nz-button nzType="default" nzShape="circle"><i nz-icon nzType="left"></i></button>
+  <div class="cards-container">
+    <ng-container *ngFor="let item of items">
+      <app-item-carousel #itemDom class="item-container" [item]="item" [ngStyle]="{'transform': 'translateX(' + position + '%)'}"></app-item-carousel>
+    </ng-container>
+  </div>
+  <button (click)="next()" [disabled]="paginationMax - currentPagination ? false : true" nz-button nzType="default" nzShape="circle"><i nz-icon nzType="right"></i></button>
+</div>

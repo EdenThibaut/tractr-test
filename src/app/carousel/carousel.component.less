@@ -1,0 +1,30 @@
+.carousel-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+      font-size: 20px;
+    }
+  }
+  .cards-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    max-width: 90%;
+    background: red;
+
+    app-item-carousel.item-container {
+      padding: 0 5px;
+      min-width: calc(33.33%);
+      transition: all 1s;
+    }
+  }
+}

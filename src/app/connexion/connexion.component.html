@@ -1,0 +1,35 @@
+<nz-drawer id="drawerCnx" [nzClosable]="true" [nzVisible]="subscription_stateCnx | async" nzPlacement="right" (nzOnClose)="close()">
+  <div id="drawerCnx-container">
+    <h2 nz-typography class="mb-5 pb-4 mt-3">Connexion</h2>
+    <p class="mb-5">Connectez-vous ou créez votre compte pour proposer une expérience</p>
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm(validateForm.value)">
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Vérifier votre adresse email">
+          <nz-input-group>
+            <input type="email" nz-input nzSize="large" formControlName="email" placeholder="Email" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Veuillez vérifier votre mot de passe">
+          <nz-input-group [nzSuffix]="suffixTemplate">
+            <input [type]="passwordVisible ? 'text' : 'password'" nz-input nzSize="large" placeholder="Mot de passe" [(ngModel)]="password" />
+          </nz-input-group>
+          <ng-template #suffixTemplate>
+            <i nz-icon [nzType]="passwordVisible ? 'eye-invisible' : 'eye'" (click)="passwordVisible = !passwordVisible"></i>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" nzSize="large" nzBlock="true" disabled >Se connecter</button>
+      <div nz-row class="login-form-margin">
+        <p class="login-form-forgot text-align-center w-100 mt-3 mb-5">Mot de passe oublié ?</p>
+      </div>
+    </form>
+    <div class="auth-social-container">
+      <button nz-button nzType="default" nzSize="large" nzBlock="true"><i nz-icon nzType="facebook"></i>Continuer avec Facebook</button>
+      <button nz-button nzType="default" nzSize="large" nzBlock="true"><i nz-icon nzType="google"></i>Continuer avec Google</button>
+    </div>
+    <nz-divider nzText="ou"></nz-divider>
+    <button nz-button nzType="primary" nzSize="large" nzBlock="true">Créer mon compte</button>
+  </div>
+</nz-drawer>

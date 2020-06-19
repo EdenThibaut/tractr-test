@@ -1,0 +1,22 @@
+<a href="#" alt="recommandations" class="item">
+  <nz-card [nzCover]="coverTemplate">
+    <nz-card-meta [nzDescription]="descriptionTemplate"></nz-card-meta>
+  </nz-card>
+</a>
+
+<ng-template #descriptionTemplate>
+  <nz-tag>
+    <a href="#">{{item.category}}</a>
+  </nz-tag>
+  <h3 nz-typography>{{item.title}}</h3>
+  <div class="rate-price-container">
+    <div class="rate-container">
+      <nz-rate [ngModel]="item.rate" nzDisabled></nz-rate>
+      <span class="comments-numb">({{item.comments}})</span>
+    </div>
+    <span class="price-container">{{item.price}} €</span>
+  </div>
+</ng-template>
+<ng-template #coverTemplate>
+  <img alt="recommandation" src={{item.img}} />
+</ng-template>

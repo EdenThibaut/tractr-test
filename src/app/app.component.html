@@ -5,21 +5,22 @@
   </nz-header>
   <nz-content id="main">
     <app-slider></app-slider>
-    <div class="container pt-4">
+    <div class="container pt-4 pb-5">
       <div class="row d-flex justify-content-between">
         <div class="col-lg-5 col-6">
           <app-details-ad></app-details-ad>
+          <app-share-ad></app-share-ad>
         </div>
         <div class="col-lg-5 col-6">
           <app-actions-ad></app-actions-ad>
         </div>
       </div>
     </div>
-
-    Content
-    <a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-      <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-    </a>
+    <div class="container-fluid pt-5 pb-4 carousel-section">
+      <h2 nz-typography><span class="title-light">Nos</span> recommandations</h2>
+      <app-carousel></app-carousel>
+    </div>
   </nz-content>
   <nz-footer>Footer</nz-footer>
+  <app-connexion></app-connexion>
 </nz-layout>

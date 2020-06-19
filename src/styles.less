@@ -92,7 +92,7 @@
 @margin-xss: 4px; // more small
 
 // height rules
-@height-base: 32px;
+@height-base: 40px;
 @height-lg: 40px;
 @height-sm: 24px;
 
@@ -994,6 +994,58 @@
     }
     &.ant-rate-star-zero i{
       color: #4a4a4a;
+    }
+  }
+}
+
+.cards-container .ant-card .ant-card-body{
+  padding: 10px;
+
+  h3.ant-typography{
+    margin: 0.5em 0 1em;
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .rate-price-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .rate-container{
+      .ng-pristine .ant-rate {
+        font-size: 14px;
+        padding-bottom: 0px;
+      }
+      .comments-numb{
+        margin-left: 10px;
+      }
+    }
+    .price-container{
+      color: #4a4a4a;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+.ant-tag {
+  color: @primary-color;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid @primary-color;
+  a{
+    color: @primary-color;
+  }
+}
+
+.ant-drawer .ant-drawer-content-wrapper{
+  width: 400px !important;
+  .ant-drawer-close{
+    border: none !important;
+    i{
+      font-size: 30px;
+      color: @primary-color;
     }
   }
 }
