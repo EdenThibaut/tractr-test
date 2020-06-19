@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { DrawerCnx } from "../../data.service";
+import { DrawerCnx, DrawerInscription } from "../../data.service";
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,11 +11,16 @@ import { Observable } from 'rxjs';
 export class MenuMainComponent implements OnInit {
   //@Output() public openCnx: EventEmitter<void> = new EventEmitter();
   public stateCnx: boolean = false;
+  public stateInscription: boolean = false;
   private _subscription_stateCnx: any;
+  private _subscription_stateInscription: any;
 
-  constructor(private _drawerCnx: DrawerCnx) {
+  constructor(private _drawerCnx: DrawerCnx, private _drawerInscription: DrawerInscription) {
     this._subscription_stateCnx = this._drawerCnx.stateDrawer.subscribe((value) => {
       this.stateCnx = value;
+    });
+    this._subscription_stateInscription = this._drawerInscription.stateDrawer.subscribe((value) => {
+      this.stateInscription = value;
     });
   };
 
@@ -25,6 +30,10 @@ export class MenuMainComponent implements OnInit {
 
   openSignUp(){
     this._drawerCnx.changeState(true);
+  }
+
+  openSignOn(){
+    this._drawerInscription.changeState(true);
   }
 
 }

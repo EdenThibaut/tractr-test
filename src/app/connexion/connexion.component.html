@@ -22,7 +22,7 @@
       </nz-form-item>
       <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" nzSize="large" nzBlock="true" disabled >Se connecter</button>
       <div nz-row class="login-form-margin">
-        <p class="login-form-forgot text-align-center w-100 mt-3 mb-5">Mot de passe oublié ?</p>
+        <p class="login-form-forgot text-center w-100 mt-3 mb-5">Mot de passe oublié ?</p>
       </div>
     </form>
     <div class="auth-social-container">
@@ -30,6 +30,6 @@
       <button nz-button nzType="default" nzSize="large" nzBlock="true"><i nz-icon nzType="google"></i>Continuer avec Google</button>
     </div>
     <nz-divider nzText="ou"></nz-divider>
-    <button nz-button nzType="primary" nzSize="large" nzBlock="true">Créer mon compte</button>
+    <button (click)="openSignOn()" nz-button nzType="primary" nzSize="large" nzBlock="true">Créer mon compte</button>
   </div>
 </nz-drawer>

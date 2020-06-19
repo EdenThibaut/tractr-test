@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
-import { DrawerCnx } from "../data.service";
+import { DrawerCnx, DrawerInscription } from "../data.service";
 import { startWith } from "rxjs/operators";
 import { Observable } from "rxjs";
 
@@ -12,6 +12,8 @@ import { Observable } from "rxjs";
 })
 export class ConnexionComponent implements OnInit {
   public visible: boolean;
+  public stateInscription: boolean = false;
+  private _subscription_stateInscription: any;
   public subscription_stateCnx: Observable<boolean>;
   public validateForm: FormGroup;
   passwordVisible = false;
@@ -38,8 +40,11 @@ export class ConnexionComponent implements OnInit {
     setTimeout(() => this.validateForm.controls.confirm.updateValueAndValidity());
   }
 
-  constructor(private _drawerCnx: DrawerCnx, private fb: FormBuilder) {
+  constructor(private _drawerCnx: DrawerCnx, private fb: FormBuilder, private _drawerInscription: DrawerInscription) {
     this.subscription_stateCnx = this._drawerCnx.stateDrawer.pipe(startWith(false),);
+    this._subscription_stateInscription = this._drawerInscription.stateDrawer.subscribe((value) => {
+      this.stateInscription = value;
+    });
   }
 
   ngOnInit(): void {
@@ -48,6 +53,11 @@ export class ConnexionComponent implements OnInit {
       password: [null, [Validators.required]],
       //remember: [true]
     });
+  }
+
+  openSignOn(){
+    this._drawerCnx.changeState(false);
+    this._drawerInscription.changeState(true);
   }
 
   close(): void {

@@ -1,0 +1,15 @@
+<nz-drawer id="drawerInscription" [nzClosable]="true" [nzVisible]="subscription_stateInscription | async" nzPlacement="right" (nzOnClose)="close()">
+  <div id="drawerInscription-container">
+    <h2 nz-typography class="mb-5 pb-4 mt-3">Inscription</h2>
+    <div class="auth-social-container">
+      <button nz-button nzType="default" nzSize="large" nzBlock="true"><i nz-icon nzType="facebook"></i>Continuer avec Facebook</button>
+      <button nz-button nzType="default" nzSize="large" nzBlock="true"><i nz-icon nzType="google"></i>Continuer avec Google</button>
+    </div>
+    <nz-divider nzText="ou"></nz-divider>
+    <button nz-button nzType="primary" nzSize="large" nzBlock="true">Créer un compte</button>
+    <p (click)="openSignUp()"  class="has_account text-center w-100 mt-4 mb-5">J'ai déjà un compte
+      <i nz-icon nzType="right" nzTheme="outline"></i>
+    </p>
+  </div>
+</nz-drawer>
+

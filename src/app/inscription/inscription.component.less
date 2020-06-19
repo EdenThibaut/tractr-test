@@ -1,0 +1,66 @@
+#drawerInscription-container{
+  h2.ant-typography{
+    color: #085629;
+    font-size: 2em;
+    font-weight: 500;
+  }
+  & > p{
+    color: #085629;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  & > form {
+    .ant-form-item{
+      margin-bottom: 24px;
+      .ant-form-item-control-input-content > *{
+        height: 40px;
+        padding: 6px 11px;
+        font-size: 16px;
+        border-radius: 4px;
+      }
+    }
+    .login-form-forgot{
+      color: rgba(0,0,0,0.6);
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        color: #085629;
+      }
+    }
+  }
+  & > .auth-social-container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    color: #085629;
+    font-size: 16px;
+    font-weight: 500;
+    border-width: 2px;
+    border-color: #085629;
+    i{
+      font-size: 20px;
+    }
+  }
+  & > .ant-divider{
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 20px 0;
+    &::before, &::after{
+      border-color: rgba(0,0,0,0.2);
+    }
+  }
+  & > .has_account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+  }
+}

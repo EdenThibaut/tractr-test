@@ -76,7 +76,7 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzResizableModule } from 'ng-zorro-antd/resizable';
 
-import { DrawerCnx } from './data.service';
+import { DrawerCnx, DrawerInscription } from './data.service';
 
 import { HeaderComponent } from './header/header.component';
 import { MenuMainComponent } from './header/menu-main/menu-main.component';
@@ -98,6 +98,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ItemCarouselComponent } from './carousel/item-carousel/item-carousel.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { FooterComponent } from './footer/footer.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 registerLocaleData(fr);
 
@@ -124,6 +125,7 @@ registerLocaleData(fr);
     ItemCarouselComponent,
     ConnexionComponent,
     FooterComponent,
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,
@@ -198,7 +200,7 @@ registerLocaleData(fr);
     NzWaveModule,
     NzResizableModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: fr_FR }, DrawerCnx],
+  providers: [{ provide: NZ_I18N, useValue: fr_FR }, DrawerCnx, DrawerInscription],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
