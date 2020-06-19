@@ -1,6 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { DrawerCnx } from "../../data.service";
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-options-ad',

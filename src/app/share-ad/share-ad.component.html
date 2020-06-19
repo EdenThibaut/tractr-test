@@ -1,8 +1,8 @@
 <div class="share-container">
   <p class="share-text">Partager l'expérience</p>
   <div class="social-network-icons">
-    <img src="./assets/img/facebook_btn.svg" alt="logo de Facebook">
-    <img src="./assets/img/twitter_btn.svg" alt="logo de Twitter">
+    <a href="#"><img src="./assets/img/facebook_btn.svg" alt="logo de Facebook"></a>
+    <a href="#"><img src="./assets/img/twitter_btn.svg" alt="logo de Twitter"></a>
   </div>
-  <button nz-button nzType="default" nzSize="small" nzShape="round">Signaler cette annonce<i nz-icon nzType="flag"></i></button>
+  <button (click)="openSignUp()" nz-button nzType="default" nzSize="small" nzShape="round">Signaler cette annonce<i nz-icon nzType="flag"></i></button>
 </div>

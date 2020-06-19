@@ -1,5 +1,5 @@
 <div id="slider-container">
-  <nz-carousel [nzEffect]="effect">
+  <nz-carousel [nzEffect]="effect" nzAutoPlay [nzAutoPlaySpeed]="4000">
     <div nz-carousel-content *ngFor="let image of images">
       <app-slide [url]="image"></app-slide>
     </div>
