@@ -6,20 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details-ad.component.less']
 })
 export class DetailsAdComponent implements OnInit {
-  public tags: { categorie: string, url: string}[];
   public details: { topic: string }[];
   constructor() {
-
-    this.tags= [{
-      "categorie": "Journée de chasse",
-      "url": "#"
-    },{
-      "categorie": "Grands gibiers",
-      "url": "#"
-    },{
-      "categorie": "Landes",
-      "url": "#"
-    }];
     this.details = [
       {"topic": "Description"},
       {"topic": "Informations générales"},

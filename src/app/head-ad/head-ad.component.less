@@ -1,0 +1,29 @@
+h1{
+  font-size: 26px;
+  font-weight: 400;
+}
+.summary-ad{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  &>*{
+    margin-right: 0.5em;
+  }
+  .rate-container a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    transition: all 1s;
+    i{
+      font-size: 16px;
+      margin-right: 6px;
+    }
+    &:hover{
+      color: #085629;
+      transform: scale(1.1);
+    }
+  }
+}

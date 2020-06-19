@@ -9,6 +9,8 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { fr_FR } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import fr from '@angular/common/locales/fr';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
@@ -99,6 +101,7 @@ import { ItemCarouselComponent } from './carousel/item-carousel/item-carousel.co
 import { ConnexionComponent } from './connexion/connexion.component';
 import { FooterComponent } from './footer/footer.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { HeadAdComponent } from './head-ad/head-ad.component';
 
 registerLocaleData(fr);
 
@@ -126,6 +129,7 @@ registerLocaleData(fr);
     ConnexionComponent,
     FooterComponent,
     InscriptionComponent,
+    HeadAdComponent,
   ],
   imports: [
     BrowserModule,
@@ -134,6 +138,8 @@ registerLocaleData(fr);
     GoogleMapsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxPageScrollCoreModule,
+    NgxPageScrollModule,
     NzAffixModule,
     NzAlertModule,
     NzAnchorModule,

@@ -1,4 +1,19 @@
+<div class="choice-dates-container mt-5">
+  <nz-select [ngModel]="-1" (ngModelChange)='handleDate($event)' nzPlaceHolder="Choisissez une date">
+    <nz-option *ngFor="let date of dates; let i=index" [nzValue]="i" [nzLabel]="date.date"></nz-option>
+  </nz-select>
+  <ng-container *ngIf="dateIsSelected">
+    <div class="grey-box mt-1 mb-3">
+      <h3>Horaire du rendez-vous</h3>
+      <p>{{dateSelected.debut}}</p>
+      <h3>Horaire de fin</h3>
+      <p>{{dateSelected.fin}}</p>
+      <h3>Nombre de places disponibles</h3>
+      <p>{{dateSelected.place}}</p>
+    </div>
+  </ng-container>
+</div>
 <div class="boutons-container">
-  <button (click)="openSignUp()" nz-button nzType="primary" nzBlock nzSize="large">Réserver</button>
+  <button (click)="openSignUp()" nz-button nzType="primary" nzBlock nzSize="large" [disabled]="!canBooking">Réserver</button>
   <button (click)="openSignUp()" nz-button nzType="default" nzBlock nzSize="large">Poser une question</button>
 </div>

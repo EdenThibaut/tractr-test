@@ -1,0 +1,14 @@
+<h1 nz-typography>Week-end Battue aux sangliers dans l'Ardèche</h1>
+<div class="summary-ad">
+  <div class="rate-container">
+    <a pageScroll [pageScrollOffset]="160" href="#comments-container" (mouseover)="handleOverRate()" (mouseout)="handleOutRate()"><i nz-icon nzType="star" [nzTheme]="iconType"></i> 4,50 (2)</a>
+  </div>
+  <span>-</span>
+  <div class="tags-container">
+    <nz-tag *ngFor="let tag of tags; let i = index; trackBy:trackByFn" (mouseover)="handleOverTag(i)" (mouseout)="handleOutTag(i)" [nzColor]="tag.isOver ? '#085629':''">
+      <a href={{tag.url}}>{{tag.categorie}}</a>
+    </nz-tag>
+  </div>
+</div>
+
+
