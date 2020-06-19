@@ -97,6 +97,7 @@ import { ShareAdComponent } from './share-ad/share-ad.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ItemCarouselComponent } from './carousel/item-carousel/item-carousel.component';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { FooterComponent } from './footer/footer.component';
 
 registerLocaleData(fr);
 
@@ -122,6 +123,7 @@ registerLocaleData(fr);
     CarouselComponent,
     ItemCarouselComponent,
     ConnexionComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
